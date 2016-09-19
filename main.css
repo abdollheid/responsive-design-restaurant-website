@@ -193,6 +193,9 @@ header .container{
          padding: 0px;
         
     }
+    body{
+     overflow:hidden;
+    }
     
     
 }
@@ -222,5 +225,8 @@ header .container{
        box-shadow: 0 0 50px orange;
          padding: 0px;
         
+    }
+    body{
+     overflow:hidden;
     }
 }
