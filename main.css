@@ -34,6 +34,7 @@ h1{
 }
 #star{
     color: white;
+    vertical-align: middle;
     
 }
 .navbar-brand a:hover , .navbar-brand a:focus{
@@ -95,6 +96,11 @@ header .container{
     border: 2px solid white;
     
 }
+header .container .navbar-header{
+        margin-right:0px;
+         margin-left: 0px;
+    }
+   
 #telephone-for-xs  a:hover {
   color:green;
 }
@@ -110,9 +116,82 @@ header .container{
     font-size: 2vw;
     font-family: 'Indie Flower', cursive; 
 }
+#map-tile , #special-tile , #menu-tile {
+    height:250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 1px solid maroon;
+    overflow: hidden; /* should be hidden for iframe*/
+    
+    
+}
+#map-tile:hover , #special-tile:hover , #menu-tile:hover {
+    box-shadow: 2px 2px 25px gray;
+}
+#menu-tile { 
+    background:url("screenshots/menu12.jpg") no-repeat;
+    background-position: center;
+    background-size:cover;
+    
+        
+}
+
+#special-tile {
+    background:url("screenshots/burger-sandwitch.jpg") no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+#home-tiles span { 
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    opacity: .7;
+    font-size: 1.5em;
+    
+
+}
+.panel-footer{
+    
+    margin-top: 30px;
+    padding-top: 34px;
+    padding-bottom: 30px;
+    background-color: #BF4D00;
+    border: none;
+}
+footer{
+    color: burlywood;
+}
+#hours , #address { 
+line-height: 2;
+}
+#hours span , #address span{
+    font-size: 1.3em;
+    
+}
+#customer-opnions{
+   color:wheat;
+    line-height: 1.4;
+    font-style:italic;
+    padding-top: 20px;
+    
+    
+}
+#address p { 
+font-size: .7em;
+    
+}
+#copyright{
+    
+margin: 30px 0 0 0;    
+}
 
 
-/*  for large screens  */
+/*  for large screens -desktop */
 @media (min-width:1200px){
     .container .jumbotron {
         background: url(screenshots/jumberton/inside.jpg) no-repeat;
@@ -124,11 +203,11 @@ header .container{
     }
     
 }
-/*  for medium screens  */
+/*  for medium screens -desktop  */
 @media (min-width:992px)and (max-width:1199px){
      .container .jumbotron {
         background: url(screenshots/jumberton/inside-%20l1.jpg) no-repeat;
-        height: 660px;
+        height: 650px;/*temp value this should be fixed*/
         background-position: center;
         background-size: cover;
         box-shadow: 0 0 50px orange;
@@ -136,11 +215,11 @@ header .container{
     }
     
 }
-/*  for medium screens  */
+/*  for medium screens  -tablet*/
 @media(min-width:768px)and (max-width:991px){
      .container .jumbotron {
         background: url(screenshots/jumberton/inside.jpg) no-repeat;
-        height: 660px;
+        height: 600px;
         background-position: center;
         background-size: cover;
         box-shadow: 0 0 50px orange;
@@ -157,7 +236,7 @@ header .container{
     
     
 }
-/*  for extra small screens  */
+/*  for extra small screens  -phone*/
 @media (min-width:601px)and (max-width:767px){
     .navbar-brand{
         position: relative;
@@ -172,6 +251,7 @@ header .container{
     }
     header .container .navbar-header{
         margin-right:0px;
+         margin-left: 0px;
     }
    
     .navbar-toggle{
@@ -188,18 +268,34 @@ header .container{
         margin-left: 10px;
         padding-right: -200px;
     }
+    
+    
      .container .jumbotron {
-       box-shadow: 0 0 50px orange;
+         box-shadow: 0 0 50px orange;
          padding: 0px;
         
     }
-    body{
-     overflow:hidden;
+    #menu-tile , #special-tile , #map-tile {
+       width:400px;
+        margin: auto;
+        margin-bottom: 15px;
+        
+    }
+    footer  section {
+        text-align: center;
+        
+}
+   
+    
+  .navbar{
+        overflow: hidden;
+       
     }
     
     
+    
 }
-/*  for extremly small screens  */
+/*  for extremly small screens  -small phones*/
 @media (max-width:600px){
     
     .navbar-brand{
@@ -214,19 +310,36 @@ header .container{
     }
      header .container .navbar-header{
         margin-right:0px;
+         margin-left: 0px;
     }
       .navbar-toggle{
         position:relative;
         top:-13px;
+        
+          
        
     
     }
      .container .jumbotron {
        box-shadow: 0 0 50px orange;
-         padding: 0px;
+        padding: 0px;
         
     }
-    body{
-     overflow:hidden;
+      #menu-tile , #special-tile , #map-tile {
+       width:250px;
+        margin: auto;
+        margin-bottom: 15px;
+        
     }
+     footer  section {
+        text-align: center;
+        
+}
+    .navbar{
+        overflow: hidden;
+       
+    }
+    
+
+      
 }
