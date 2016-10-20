@@ -6,18 +6,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Abdo</title>
         <link rel="icon" href="screenshots/logo.jpg">
-        <meta name="viewport" content="width=device-width , intial-scale=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        
+         <script src="ajax-utils.js"></script>
+         <script src="js/jquery-3.1.0.min.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+        <script src="js/script.js"></script>
+       
+       
     </head>
     <body>
        <header>
            <nav id="header-nav" class="navbar navbar-default">
                <div class="container">
                
-               <div class="navbar-header">
+               <div class="navbar-header"> 
                   <a href="index.html" class="visible-md visible-lg  pull-left">
                    <div id="website-logo" alt="logo">
                       
@@ -29,7 +36,7 @@
                        <p><span id="star" class="glyphicon glyphicon-star" aria-hidden="true" alt="star"></span> <span id="verfied">Quality Verfied</span> </p>
                    
                    </div>
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+                    <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
                        <span class="sr-only">Toggle navigation</span>
                        <span class="icon-bar"></span>
                        <span class="icon-bar"></span>
@@ -39,11 +46,17 @@
                 </div> 
                   <div id="collapsable-nav" class="collapse navbar-collapse">
                    <ul id="nav-list" class="nav navbar-nav navbar-right">
-                     <li>
+                        <li class="visible-xs active" >
+                         <a href="index.html">
+                       <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+                         <br class="hidden-xs">Home</a>
+                       </li>
+                     <li >
                          <a href="menu.html">
                        <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>
                          <br class="hidden-xs">Menu</a>
                        </li>
+                      
                        <li>
                            <a href="#">
                        <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
@@ -58,7 +71,7 @@
                        </li>
                        <li id="phone" class="hidden-xs">
                        <a href="tel:333-333-333">
-                          <span id="telephone"> call:333-333-333</span><br><span id="we-deliver">*we deliver</span></a>
+                          <span id="telephone"> call us:303-211-000</span><br><span id="we-deliver">*we deliver</span></a>
                        </li>
                       
                       </ul>
@@ -74,47 +87,14 @@
         
         </header>
         <div id="telephone-for-xs" class="visible-xs">
-            <a class="btn" href="tel:333-333-333"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>call us:333-333-333</a>
+            <a class="btn" href="tel:333-333-333"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>call us:303-211-000</a>
             </div>
         <div id="we-deliver-for-xs" class="visible-xs">
         <p>*we deliver</p>
         </div>
         
         
-        <div id="main-content" class="container">
-            <div class="jumbotron">
-                <img src="screenshots/jumberton/inside-%20l2.jpg" alt="Picture of restaurant" class="img-responsive visible-xs"> 
-            </div>
-          
-            <div id="home-tiles" class="row">
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="menu.html">
-                        <div id="menu-tile">
-                           <span> Menu </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <a href="special.html">
-                        <div id="special-tile">
-                           <span> Special </span>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4 col-sm-12 col-xs-12">
-                    <a href="https://www.google.com.eg/maps/place/Pizza+Hut/@30.825057,30.9881438,17z/data=!3m1!4b1!4m5!3m4!1s0x14f7c9f529a19f93:0x70d89d3db2db3d5e!8m2!3d30.825057!4d30.9903378?hl=en" target="_blank">
-                        <div id="map-tile">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.2001651752003!2d30.98814375045882!3d30.825056981514805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7c9f529a19f93%3A0x70d89d3db2db3d5e!2sPizza+Hut!5e0!3m2!1sen!2seg!4v1474302715323" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
-                           <span title="map">Map </span>
-                        </div>
-                    </a>
-                    
-                </div>
-            
-                
-            </div>
-        
-        </div>
+        <div id="main-content" class="container"></div>
         <footer class="panel-footer">
             <div class="container">
                 <div class="row">
@@ -135,7 +115,7 @@
                     <span> Address:</span><br>
                     Egypt - Tanta  city - bahr st.
                     behind AlAhly-bank 
-                    <p>*Delivery area within tanta city cost 20LE , outside tanta city will cost 50LE </p>
+                    <p>*Delivery area within tanta city cost 20LE , outside tanta city cost 50LE </p>
                     <hr class="visible-xs">
                 </section>
                 
@@ -153,9 +133,8 @@
         </footer>
          
       
-        <script src="js/jquery-3.1.0.min.js"></script>
-          <script src="js/bootstrap.min.js"></script>
-        <script src="js/script.js"></script>
+      
+          
       </body>
 </html>
 
