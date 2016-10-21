@@ -81,7 +81,6 @@ h1{
     
     text-align: center;
    
-   
     
 }
 header .container{
@@ -128,7 +127,7 @@ header .container .navbar-header{
     
 }
 #map-tile:hover , #special-tile:hover , #menu-tile:hover {
-    box-shadow: 3px 3px 15px orange;
+    box-shadow: 2px 2px 25px gray;
 }
 #menu-tile { 
     background:url("screenshots/menu12.jpg") no-repeat;
@@ -175,7 +174,7 @@ line-height: 2;
     
 }
 #customer-opnions{
-    color:wheat;
+   color:wheat;
     line-height: 1.4;
     font-style:italic;
     padding-top: 20px;
@@ -192,104 +191,6 @@ margin: 30px 0 0 0;
 }
 
 
-
-#menu-categories{
-    color: white;
-    line-height: .5;
-    margin-top: 20px;
-}
-#h2-note {
-color: white;
-    margin-bottom: 20px;
-    font-size: .7em;
-}
-
-
-#an-item{
-    
-   margin-bottom: 20px;
-   
-}
-#inner-item{
-    
-    width:200px;
-    position: relative;
-    height: 200px;
-    margin: auto;
-
-}
-#inner-item:hover { 
-box-shadow: 2px 2px 20px orange; 
-
-}
-
-#an-item span { 
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    right: 0;   
-    text-align: center;
-    color: white;
-    font-size: 1.4em;
-    background-color: black;
-    opacity: .8;
-
-}
-
-
-#main-content h2 {
-        color: white;
-   
-}
-
-
-#out-holder { 
-    
- margin-bottom: 15px;
-    
-}
-#inner-holder-image{ 
-    
-
-    position: relative;
-    
-    
-    
-}
-#inner-holder-image img{
-    
-    position: absolute;
-    right: 0;
-}
-#inner-holder-text{
-   
-    padding-right: 20px;
-    color: white;
-        
-   
-}
-#inner-holder-text h3{
-    font-size: 1.4em;
-    
-}
-#inner-holder-text p {
-    font-size: .9em;
-    font-style: italic;
-    
-}
-#image-holder{ 
-
-    width: 200px;
-    margin: auto;
-    overflow: hidden;
-    
-}
-#out-holder hr{ 
-    width: 60%;
-}
-
-
-/* last normal */
 /*  for large screens -desktop */
 @media (min-width:1200px){
     .container .jumbotron {
@@ -301,9 +202,6 @@ box-shadow: 2px 2px 20px orange;
         
     }
     
-   
-    /* last lg */
-    
 }
 /*  for medium screens -desktop  */
 @media (min-width:992px)and (max-width:1199px){
@@ -314,10 +212,8 @@ box-shadow: 2px 2px 20px orange;
         background-size: cover;
         box-shadow: 0 0 50px orange;
         
-    } 
-   
-   
-    /* last md */
+    }
+    
 }
 /*  for medium screens  -tablet*/
 @media(min-width:768px)and (max-width:991px){
@@ -335,12 +231,10 @@ box-shadow: 2px 2px 20px orange;
         
       
     }
-    #out-holder{
-        height: 200px;
-    }
+   
     
     
-    /* last sm */
+    
 }
 /*  for extra small screens  -phone*/
 @media (min-width:601px)and (max-width:767px){
@@ -397,15 +291,7 @@ box-shadow: 2px 2px 20px orange;
         overflow: hidden;
        
     }
-    #inner-holder-text {
-        text-align: center;
-    }
-    #inner-holder-image img{
     
-    position: relative;
-    right: 0;
-}
-    /* last xs */
     
     
 }
@@ -451,22 +337,9 @@ box-shadow: 2px 2px 20px orange;
 }
     .navbar{
         overflow: hidden;
-      }
-    .col-xxs-12{  
-        position: relative;
-        padding-left: 15px;
-        padding-right: 15px;
-        float: left;
-        width: 100%;
-            min-height: 1px;
+       
     }
     
-    #inner-holder-image img{
-    
-    position: relative;
-    right: 0;
-}
-    
-/* last xxs */
+
       
 }
