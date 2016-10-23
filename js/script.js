@@ -11,10 +11,10 @@ $( function (){
   
     var dc = {};
     var homeHtml = "snippet/home-snippet.html";
-    var allCategoriestUrl="http://davids-restaurant.herokuapp.com/categories.json";
+    var allCategoriestUrl="https://davids-restaurant.herokuapp.com/categories.json";
     var categoriesTitleHtml="snippet/categories-title-snippet.html";
     var categoryHtml = "snippet/categories-snippet.html";
-    var menuItemUrl = "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
+    var menuItemUrl = "https://davids-restaurant.herokuapp.com/menu_items.json?category=";
     var menuItemsTitleHtml = "snippet/menu-item-title.html";
     var menuItemHtml = "snippet/menu-item.html";
     var currentCatShortName ="";
