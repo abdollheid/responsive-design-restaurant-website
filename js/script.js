@@ -17,6 +17,7 @@ $( function (){
     var menuItemUrl = "http://davids-restaurant.herokuapp.com/menu_items.json?category=";
     var menuItemsTitleHtml = "snippet/menu-item-title.html";
     var menuItemHtml = "snippet/menu-item.html";
+    var currentCatShortName ="";
     
     
     
@@ -24,6 +25,7 @@ $( function (){
         document.querySelector(selector).innerHTML=html;
         
     };
+    
     
     var showLoading = function (selector){
        var html =  "<div class='text-center'>"
@@ -43,14 +45,16 @@ $( function (){
      function (event) {
         showLoading("#main-content");
        $ajaxutils.setGetRequest(homeHtml,
-                     function(response){
+          function(response){
             insertHtml("#main-content",response);
             
             
         })
       dc.loadMenuCategory = function(){
+          
        showLoading("#main-content");
-          $ajaxutils.setGetRequest(allCategoriestUrl,buildAndShowCategoriesHtml,true);
+       active("#homeFromTheList","#menuFromTheList");
+       $ajaxutils.setGetRequest(allCategoriestUrl,buildAndShowCategoriesHtml,true);
    
       };     
         
@@ -62,13 +66,7 @@ $( function (){
                               function (finalCategory)  {
                     var html= buildThePage(category,finalCategory,finalCategoryTitle);
                     insertHtml("#main-content",html);
-                    
-                    
-                }        
-                             ); } );
-    
-            
-        };
+                });});};
         
         
         
@@ -91,6 +89,8 @@ $( function (){
     }
         
         dc.loadMenuItems = function (categoryShort){
+            currentCatShortName=categoryShort;
+            active("#homeFromTheList","#menuFromTheList");
             showLoading("#main-content");
             $ajaxutils.setGetRequest(menuItemUrl +categoryShort, buildAndShowMenuItemsHtml,true);
         };
@@ -112,6 +112,48 @@ $( function (){
                                     
                                     );
         }
+        
+        function buildMenuItemsViewHtml(dataFromSite ,title ,body){
+       
+            
+            
+            var final = insertProperty(title , "name",dataFromSite.category.name);
+            final = insertProperty(final, "special_instructions",dataFromSite.category.special_instructions);
+            final +="<div id='row' class='row'>";
+             
+            
+          
+            
+            
+            
+            for (var i =0 ;i < dataFromSite.menu_items.length;++i){
+                 var html="";
+                if(i%2===0){
+                html+="<div style='clear:left;'>";
+            }
+           html+=body;
+  html= insertProperty(html,"short_name",dataFromSite.menu_items[i].short_name);
+  html = insertProperty(html,"catShortName",currentCatShortName);
+  html=insertProperty(html,"name",dataFromSite.menu_items[i].name);
+  html=insertProperty(html,"description",dataFromSite.menu_items[i].description);
+  final+=html;
+              
+                if(i%2===0){
+                html+="</div>";
+            }
+
+            }
+            final+=" </div>";
+             return final;
+            
+        }
+        function active(selectorToBeUnactive,selectorToBeActive){
+            var c =(document.querySelector(selectorToBeUnactive).className);
+           document.querySelector(selectorToBeUnactive).className=insertProperty(c,"active","");
+            document.querySelector(selectorToBeActive).className+=" active";
+            
+        }
+        
         
         
     
